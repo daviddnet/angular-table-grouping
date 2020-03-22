@@ -32,6 +32,7 @@ export class AppComponent implements OnInit {
     protected dataSourceService: CarTableDataService,
   ) {
 
+    /*
     this.columns = [{
       field: 'id'
     }, {
@@ -43,17 +44,43 @@ export class AppComponent implements OnInit {
     }, {
       field: 'color'
     }];
+    */
+    this.columns = [
+      {
+        field : 'id'
+      },
+      {
+        field : 'date'
+      },
+      {
+        field : 'dateFormated'
+      },
+      {
+        field : 'employeeId'
+      },
+      {
+        field : 'totalPaymentUnits'
+      },
+      {
+        field : 'laborHours'
+      },
+    ]
+
+
     this.displayedColumns = this.columns.map(column => column.field);
-    this.groupByColumns = ['brand'];
+    //this.groupByColumns = ['brand'];
+    this.groupByColumns = ['date']
   }
 
   ngOnInit() {
     this.dataSourceService.getAllData()
     .subscribe(
       (data: any) => {
+          /*
           data.data.forEach((item, index) => {
             item.id = index + 1;
           });
+          */
           this._alldata = data.data;
           this.dataSource.data = this.addGroups(this._alldata, this.groupByColumns);
           this.dataSource.filterPredicate = this.customFilterPredicate.bind(this);
@@ -63,13 +90,16 @@ export class AppComponent implements OnInit {
     );
   }
 
+  /*
   groupBy(event, column) {
     event.stopPropagation();
     this.checkGroupByColumn(column.field, true);
     this.dataSource.data = this.addGroups(this._alldata, this.groupByColumns);
     this.dataSource.filter = performance.now().toString();
   }
+  */
 
+  /*
   checkGroupByColumn(field, add ) {
     let found = null;
     for (const column of this.groupByColumns) {
@@ -87,13 +117,16 @@ export class AppComponent implements OnInit {
       }
     }
   }
+  */
 
+  /*
   unGroupBy(event, column) {
     event.stopPropagation();
     this.checkGroupByColumn(column.field, false);
     this.dataSource.data = this.addGroups(this._alldata, this.groupByColumns);
     this.dataSource.filter = performance.now().toString();
   }
+  */
 
   // below is for grid row grouping
   customFilterPredicate(data: any | Group, filter: string): boolean {
@@ -123,10 +156,12 @@ export class AppComponent implements OnInit {
     return parent.visible && parent.expanded;
   }
 
+  /*
   groupHeaderClick(row) {
     row.expanded = !row.expanded;
     this.dataSource.filter = performance.now().toString();  // bug here need to fix
   }
+  */
 
   addGroups(data: any[], groupByColumns: string[]): any[] {
     const rootGroup = new Group();

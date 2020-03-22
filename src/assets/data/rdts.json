@@ -1,0 +1,122 @@
+{
+    "data":[
+        {
+            "employeeId": 1087,
+            "employee": {
+              "id": 1087,
+              "clientId": 1,
+              "code": 1039,
+              "documentId": "1039",
+              "firstName1": "LUIS",
+              "firstName2": "",
+              "lastName1": "Apellido 14",
+              "lastName2": "",
+              "branchOfficeId": 14,
+              "workingDayId": 7,
+              "paymentGroupId": 11,
+              "priceListId": 11,
+              "activitySubGroupIds": [
+                
+              ],
+              "sectionsIds": [
+                
+              ]
+            },
+            "paymentConceptId": 1311,
+            "paymentConcept": {
+              "id": 1311,
+              "clientId": 1,
+              "udpClassId": 1,
+              "code": 2,
+              "description": "ARREGLO DE DAYPA Y BOLSA                          ",
+              "areaType": 0,
+              "payUnitIsDetail": false,
+              "areaControl": false,
+              "paymentUnit": "HRA",
+              "weekTurns": 0,
+              "weeksCicle": 0,
+              "payDelay": false,
+              "rdtClass": 1,
+              "modifyRDTValue": false,
+              "activitySubGroupIds": [
+                
+              ],
+              "priceListIds": [
+                11,
+                12
+              ]
+            },
+            "costCenterId": 12,
+            "costCenter": {
+              "id": 12,
+              "clientId": 1,
+              "code": "001",
+              "name": "FINCA 1",
+              "shortName": "S"
+            },
+            "laborHours": 8,
+            "rdtClass": 1,
+            "paymentUnit": "HRA",
+            "unitValue": 3.2,
+            "totalPaymentUnits": 3,
+            "surchargePercentage": 0,
+            "comments": "ddd",
+            "udps": null,
+            "uuid": "ca2bf650-67e2-11ea-92db-3f4c91701e53",
+            "package": "121600001",
+            "createdAt": 1584403434037,
+            "updatedAt": 1584403434037,
+            "date": 1584334800000,
+            "branchOfficeId": 14,
+            "branchOffice": {
+              "id": 14,
+              "code": "001",
+              "name": "SUCURSAL 001",
+              "shortName": "SUC001",
+              "calendarCode": 1,
+              "forms": [
+                2
+              ],
+              "paymentGroups": [
+                {
+                  "paymentGroupId": 11,
+                  "groupFileId": 2,
+                  "priceListId": 11
+                },
+                {
+                  "paymentGroupId": 12,
+                  "groupFileId": 2,
+                  "priceListId": 12
+                }
+              ]
+            },
+            "sectionId": 34,
+            "section": {
+              "id": 34,
+              "clientId": 1,
+              "branchOfficeId": 14,
+              "code": "001",
+              "name": "SUCURSAL 001",
+              "class": "Campo",
+              "coordinatorName": "000",
+              "formIds": [
+                2
+              ]
+            },
+            "calendarId": 91,
+            "calendar": {
+              "id": 91,
+              "code": 1,
+              "year": 2020,
+              "week": 12,
+              "initialDate": "2020-03-16T00:00:00+00:00",
+              "finalDate": "2020-03-22T23:59:59+00:00",
+              "initialDateTime": 1584316800000,
+              "finalDateTime": 1584921599000
+            },
+            "syncedAt": null,
+            "totalPayment": 9.6,
+            "id": 3
+          }
+    ]
+}
